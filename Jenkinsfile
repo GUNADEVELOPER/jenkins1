@@ -12,9 +12,11 @@ pipeline {
     }
 
     stages {
-        stage('Git Checkout') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/GUNADEVELOPER/jenkins1.git'
+                checkout scmGit(branches: [[name: 'main']],
+                userRemoteConfigs: [[url: 'https://github.com/GUNADEVELOPER/jenkins1.git']])
+                #git 'https://github.com/GUNADEVELOPER/jenkins1.git'
             }
         }
 
