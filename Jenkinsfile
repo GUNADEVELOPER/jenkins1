@@ -8,7 +8,7 @@ pipeline {
         TF_VAR_region         = 'us-west-2'
         TF_VAR_ami            = 'ami-0323ead22d6752894'
         TF_VAR_instance_type  = 't2.micro'
-        TF_VAR_bucket_name    = 'example-bucket-123456'
+        
     }
 
     stages {
