@@ -16,7 +16,7 @@ pipeline {
             steps {
                 checkout scmGit(branches: [[name: 'main']],
                 userRemoteConfigs: [[url: 'https://github.com/GUNADEVELOPER/jenkins1.git']])
-                #git 'https://github.com/GUNADEVELOPER/jenkins1.git'
+               
             }
         }
 
