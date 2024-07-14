@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+      parameters {
+        booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
+        choice(name: 'action', choices: ['apply', 'destroy'], description: 'Select the action to perform')
+    }
+
     environment {
         AWS_ACCESS_KEY_ID     = credentials('aws-jenkins-credentials')
         AWS_SECRET_ACCESS_KEY = credentials('aws-jenkins-credentials1')
