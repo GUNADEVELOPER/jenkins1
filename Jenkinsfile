@@ -12,7 +12,7 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        stage('Git Checkout') {
             steps {
                 git 'https://github.com/GUNADEVELOPER/jenkins1.git'
             }
